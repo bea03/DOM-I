@@ -36,7 +36,7 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-
+document.body.style.backgroundColor = "#66ffcc";
 //header
 
 let logo = document.getElementById('logo-img');
@@ -50,7 +50,7 @@ navLinks.forEach((element, i) => {
 });
 
 navLinks.forEach( (element) => {
-  element.style.color = "green";
+  element.style.color = "red";
 });
 
 
@@ -100,3 +100,11 @@ contactP[2].textContent = siteContent.contact.email;
 //footer
 const footP = document.querySelector('footer p');
 footP.textContent = siteContent.footer.copyright;
+
+//creating a connection to digital timer
+const digitalButton = document.createElement('button');
+const ctaText = document.querySelector('.cta-text');
+digitalButton.textContent = "Digital Timer";
+digitalButton.setAttribute('onclick', "location.href='./stretch-assignment/digital_timer/index.html'");
+
+ctaText.appendChild(digitalButton);
